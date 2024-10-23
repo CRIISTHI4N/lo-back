@@ -37,7 +37,7 @@ app.use('/public/', express.static(`${__dirname}/storage/fotoUsuario`));
 app.use('/public/', express.static(`${__dirname}/storage/actividades`));
 
 
-const whiteList = [process.env.FRONT_END_URL, 'http://192.168.1.25:3000', 'http://192.168.1.4:3000']
+const whiteList = [process.env.FRONT_END_URL]
 // const whiteList = [process.env.FRONT_END_URL, 'http://192.168.1.25:3000', 'http://192.168.1.4:3000', 'https://lo-front.vercel.app']
 const corsOptions = {
     origin: function (origin, callback) {
