@@ -82,7 +82,7 @@ app.use('/api/biometrico', biometricoRoute);
 // });
 
 // const PORT = process.env.PORT || 4000
-const PORT = process.env.PORT || 3000
+const PORT = process.env.PORT || 4000
 
 // Lanzamiento del servidor
 app.listen(PORT, () => {
