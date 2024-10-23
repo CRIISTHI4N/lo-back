@@ -13,19 +13,19 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
 
 // Conección BD
-import { conecctionDB } from "./config/db.js"
+import { conecctionDB } from "../config/db.js"
 
 // Importación de rutas
 
-import usuarioRoute from "./routes/usuarioRoute.js";
-import actividadesRoute from "./routes/actividadesRoute.js";
-import libroObra from "./routes/libroObraRoute.js";
-import formularioLibroObra from "./routes/formularioLibroObra.js";
-import equiposObraRoute from "./routes/equiposObraRoute.js";
-import autorizacionLibroObra from "./routes/autorizacionLibroObra.js";
-import unidadesRoute from "./routes/unidadesRoute.js";
-import userRoute from "./routes/userRoute.js";
-import biometricoRoute from "./routes/biometricoRoute.js";
+import usuarioRoute from "../routes/usuarioRoute.js";
+import actividadesRoute from "../routes/actividadesRoute.js";
+import libroObra from "../routes/libroObraRoute.js";
+import formularioLibroObra from "../routes/formularioLibroObra.js";
+import equiposObraRoute from "../routes/equiposObraRoute.js";
+import autorizacionLibroObra from "../routes/autorizacionLibroObra.js";
+import unidadesRoute from "../routes/unidadesRoute.js";
+import userRoute from "../routes/userRoute.js";
+import biometricoRoute from "../routes/biometricoRoute.js";
 
 const app = express()
 dotenv.config()
@@ -82,7 +82,7 @@ app.use('/api/biometrico', biometricoRoute);
 // });
 
 // const PORT = process.env.PORT || 4000
-const PORT = process.env.PORT || 4000
+const PORT = process.env.PORT || 3000
 
 // Lanzamiento del servidor
 app.listen(PORT, () => {
