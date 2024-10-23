@@ -36,7 +36,7 @@ conecctionDB()
 app.use('/public/', express.static(`${__dirname}/storage/fotoUsuario`));
 app.use('/public/', express.static(`${__dirname}/storage/actividades`));
 
-const whiteList = [process.env.FRONT_END_URL, 'http://192.168.1.25', 'http://192.168.1.4', 'lo-front.vercel.app']
+const whiteList = [process.env.FRONT_END_URL]
 const corsOptions = {
     origin: function (origin, callback) {
         if (whiteList.includes(origin)) {
