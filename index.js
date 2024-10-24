@@ -36,19 +36,12 @@ conecctionDB()
 app.use('/public/', express.static(`${__dirname}/storage/fotoUsuario`));
 app.use('/public/', express.static(`${__dirname}/storage/actividades`));
 
-const whiteList = [process.env.FRONT_END_URL, 'https://lo-front.vercel.app/', 'https://lo-front.vercel.app', 'lo-front.vercel.app']
 const corsOptions = {
-    origin: function (origin, callback) {
-        if (whiteList.includes(origin)) {
-            callback(null, true)
-        } else {
-            callback(new Error("Error de cors"))
-        }
-    },
+    origin: '*', // Permitir todas las conexiones
     allowedHeaders: ['Content-Type', 'Authorization'],
-}
+};
 
-app.use(cors(corsOptions))
+app.use(cors(corsOptions));
 
 
 // Rutas
